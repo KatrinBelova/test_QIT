@@ -1,0 +1,47 @@
+section.offer#offer
+	.container
+		.row
+			.col-12
+				.offer__caption
+					p CAT–технология
+					p Translation Memory
+					p Сократите до 70% расходов НА УСЛУГИ ПЕРЕВОДА
+		.row
+			.col-12
+				.offer__description 
+					p Наша компания использует самые современные технологии для повышения эффективности работы переводчиков.
+					p С технологией #[span Translation Memory] вам не придётся платить за многократный перевод повторяющихся фрагментов текста. 
+		.row
+			.col-12
+				ul.offer__list
+					mixin offer(src, alt, val, about)
+						li.offer__item
+							img.offer__img(src= src, alt= alt)
+							.offer__about
+								span.offer__number= val
+								p= about
+					+offer('images/tables/table1.jpg', ' ', '1', 'Наш переводчик выполняет перевод термина/фразы/предложения')
+					+offer('images/tables/table2.jpg', ' ', '2', 'Перевод сохраняется в памяти переводов (Translation Memory)')
+					+offer('images/tables/table3.jpg', ' ', '3', 'Система автоматически использует то же значение для всех последующих случаев, экономя время и ваш бюджет')
+					+offer('images/tables/table4.jpg', ' ', '4', 'По мере наполнения памяти переводов (Translation Memory) вы все больше и больше экономите время и ваш бюджет')
+					+offer('images/tables/table5.jpg', ' ', '5', 'Больше текстов – перевод быстрее и выгоднее!')
+		.row
+			.col-12
+				h3 Оцените 3 преимущества, #[br] которые вы получаете в результате:
+		.row.flex-column.flex-sm-row.align-items-center
+			.col-8.col-sm-4
+				.offer__benefit
+					img(src='images/icons/plane.png' alt='')
+					p Высокая скорость, недоступная традиционным методикам перевода
+			.col-8.col-sm-4
+				.offer__benefit
+					img(src='images/icons/winner.png' alt='')
+					p Стабильно высокое качество, невозможное для машинного перевода
+			.col-8.col-sm-4
+				.offer__benefit
+					img(src='images/icons/pig.png' alt='')
+					p Экономия! При переводе большого количества текстов, Вы экономите – до 70% своего бюджета!
+		.row
+			.col-12
+				button.offer__button.button.button_callForm ЗАКАЗАТЬ ПЕРЕВОД
+.modal__img

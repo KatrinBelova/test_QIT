@@ -1,0 +1,117 @@
+.form 
+	background-color #fff
+	&_sm
+		position relative
+		display flex
+		flex-direction column
+		align-items center
+		text-align left
+		padding 35px 20px 30px 21px
+		border 1px solid red
+		border-width 0px 1px 1px
+		width w=280px
+		background-color #fff
+		&::before
+			position absolute
+			content ''
+			top -14px
+			left -1px
+			width w
+			height 14px
+			border 1px solid red
+			border-width 0px 1px 0px 1px
+			background-image linear-gradient(to bottom, red, red 1px, white 1px, white),
+				linear-gradient(-315deg, white, white 9px, red 10px, white 9px, transparent 9px, transparent),
+				linear-gradient(-45deg, white, white 9px, red 10px, red 9px, transparent 9px, transparent),
+				linear-gradient(to bottom, red, red 1px, white 1px, white);
+			background-size calc(50% - 12px) 100%,
+				22px 100%,
+				22px 100%,
+				calc(50% - 12px) 100%;
+			background-repeat: no-repeat;
+			background-position: left,
+				center left calc(50% - 2px),
+				center right calc(50% - 2px),
+				right
+	&__group
+		position relative
+		display inline-flex
+		vertical-align bottom
+		height 2.15rem
+		cursor pointer
+		background #363636
+		font-size 1rem
+		&:before
+			content ''
+			position absolute
+			top 1px
+			right 1px
+			bottom 1px
+			left 1px
+			background #fff
+		&_block
+			width 100%
+		&_lg
+			height 2.5rem
+			font-size 1.25rem
+	&__input
+		position relative
+		width w=230px
+		height h=42px
+		padding 0 10px 0 30px
+		margin-top 4px
+		margin-bottom 4px
+		box-shadow none
+		outline none
+		color #333
+		font-size inherit
+		font-weight 300
+		border 1px solid rgba(1, 1, 1, 0.5)
+		background-color #fff
+		overflow hidden
+		text-overflow ellipsis
+		white-space nowrap
+		cursor text
+		transition .2s
+		&::placeholder
+			font-size 0.875rem
+			font-weight 400
+			opacity 1
+			color #333
+	&__field
+		position relative
+		width w
+		height h
+	&__field::before
+		content '\f105'
+		position absolute
+		top 50%
+		transform translateY(-75%)
+		left 15px
+		bottom 10px
+		color red
+		width 15px
+		height 15px
+		font-size 15px
+		z-index 2
+		font-family 'FontAwesome'
+	&__about
+		font-weight 300
+		color #333
+		font-size 15px
+		line-height 1.8em
+	&__title_lg
+		font-size 22px
+	&__title_sm
+		font-size 20px
+		line-height 24px
+	&__title_lg,
+	&__title_sm
+		font-weight 300
+		color red
+	&__message
+		color #000
+		font-size 0.9375rem
+		font-weight 300
+		&_error
+			color #ea4b35

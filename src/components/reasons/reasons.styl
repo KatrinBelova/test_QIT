@@ -1,0 +1,78 @@
+.reasons
+	background url('../images/book.jpg') center no-repeat
+	background-size cover
+	padding-bottom 60px
+	&__caption
+		margin-top 50px
+		color red
+		p
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3)
+				font-weight 300
+			&:nth-child(2)
+				font-size 35px
+				line-height 28px
+			&:nth-child(1)
+				font-size 50px
+				line-height 60px
+			&:nth-child(3)
+				font-size 30px
+				line-height 30px
+	&__about
+		margin-top 32px
+		margin-bottom 50px
+		color #000
+		font-size 20px
+		line-height 26px
+		font-weight 400
+	&__button
+		margin-top 30px
+	.form__title
+		margin-top 44px
+		margin-bottom 70px
+	&__galery
+		margin-top 60px
+		max-width 770px
+		max-height 770px
+	&__row_top
+		display flex
+		flex-wrap no-wrap
+		img
+			&:nth-child(1)
+				margin-right 1px
+	&__item
+		position relative
+		display block
+		&::before
+			position absolute
+			content ''
+			width 100%
+			height 100%
+			background-color rgba(203,14,23,0.9)
+			top 0
+			bottom 0
+			z-index 2
+			opacity 0
+		&:hover::before
+			opacity 1
+			transition all .2s linear
+		p
+			position absolute
+			top 0
+			left 0
+			margin-left 20px
+	&__row_bottom
+		display flex
+	&__item_left
+		margin-right 1px
+		img
+			margin-top 1px
+	&__item_right
+		margin-left 1px
+		img
+			margin-top 1px
+	&__item_left,
+	&__item_right
+		display flex
+		flex-direction column

@@ -1,0 +1,53 @@
+header.header#home
+	.container
+		.row
+			.col-12.col-sm-6.col-lg-7
+				img.header__logo(src='images/logos/logo.png' alt='')
+			.col-12.col-sm-6.col-lg-5
+				.header__info
+					ul.header__languages
+						mixin lang(href, name, active)
+							li.header__lang
+								a.header__link(href=href, class=active)= name
+						+lang('#', 'En')
+						+lang('#', 'Ru', 'active_link')
+						+lang('#', 'It')
+						+lang('#', 'De')
+						+lang('#', 'Fr')
+						+lang('#', 'Es')
+						+lang('#', 'Pt')
+					h1 Письменные и устные переводы для вашего бизнеса
+					p.header__phone +7 /495/ 223 92 26
+					p.header__email info@buro-eclipse.ru
+					button.header__button.button.button_callForm ОБРАТНЫЙ ЗВОНОК
+		.row
+			.col-12.col-md-7.col-lg-8
+				.header__caption
+					p ЭКОНОМЬТЕ ДО 70% БЮДЖЕТА НА ПЕРЕВОД
+					p при помощи технологии
+				h2 Translation Memory
+				ul.header__benefits
+					mixin benefit(src, alt, title)
+						li.header__item
+							img.header__icon(src= src, alt= alt)
+							span.header__benefit!= title
+					+benefit('images/icons/graduation.png', ' ', 'Более 5 лет' +'<br>' +' на рынке')
+					+benefit('images/icons/iso.png', ' ', 'Сертификат' +'<br>' +' ISO')
+					+benefit('images/icons/handshake.png', ' ', 'Член международной ассоциации GALA')
+					+benefit('images/icons/clients.png', ' ', 'Более 500 постоянных клиентов')
+					+benefit('images/icons/headset.png', ' ', 'Более 12 000 часов устного перевода в год')
+					+benefit('images/icons/pages.png', ' ', 'Более 120 000 переведенных страниц в год')
+			.col-12.col-md-5.col-lg-4
+				form.form.form_sm.header__form(action='' method='post')
+					p.form__about Нужен срочный перевод контракта или делового письма? Переговоры с иностранными партнерами перенесли на сегодняшний вечер, а под рукой нет переводчика?
+					p.form__title.form__title_lg Решите задачу сейчас:
+					formgroup
+						.form__field
+							input.form__input(placeholder='Введите имя:' name='name')
+						.form__field
+							input.form__input(placeholder='Введите телефон:' name='number')
+						button.button.header__button.form__button#submit(type='submit') Нужен срочный перевод
+				.header__message.form__message
+					p Спасибо, ваш запрос отправлен.
+
+

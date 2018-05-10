@@ -1,0 +1,16 @@
+section.modalForm#modalForm
+	.modalForm__bg
+	.modalForm__window
+		form.form.modalForm__form(action='' method='')
+			.form__title.form__title_lg 
+				p Заполните форму
+			formgroup
+				.form__field
+					input.form__input(placeholder='Введите имя:' name='name')
+				.form__field
+					input.form__input(placeholder='Введите телефон:' name='number')
+				.form__field
+					input.form__input(placeholder='Введите e-mail:' name='email')
+				button.button.modalForm__button.form__button#submit(type='submit') ЗАКАЗАТЬ
+			.modalForm__message.form__message
+					p Спасибо, ваш запрос отправлен.

@@ -1,0 +1,44 @@
+section.reasons#reasons
+	.container
+		.row
+			.col-8
+				.reasons__galery
+					.reasons__row_top
+						.reasons__item
+							img.reasons__img(src='images/meeting/meeting1.jpg')
+						.reasons__item
+							img.reasons__img(src='images/meeting/meeting2.jpg')
+					.reasons__row_bottom
+						.reasons__item_left
+							.reasons__item
+								img.reasons__img(src='images/meeting/meeting3.jpg')
+							.reasons__item
+								img.reasons__img(src='images/meeting/meeting5.jpg')
+						.reasons__item
+							img.reasons__img(src='images/meeting/meeting4.jpg')
+						.reasons__item_right
+							.reasons__item
+								img.reasons__img(src='images/meeting/meeting6.jpg')
+							.reasons__item
+								img.reasons__img(src='images/meeting/meeting7.jpg')
+
+			.col-4
+				.reasons__caption
+					p 7 причин
+					p обратиться в Eclipse,
+					p если вы ищите устного переводчика
+				p.reasons__about В Eclipse вам подберут квалифицированного переводчика для любой ситуации
+				form.form_sm
+					p.form__title.form__title_sm Мы предложим вам лучшее решение для вашей задачи:
+					formgroup
+						.form__field
+							input.form__input(placeholder='Введите имя:' name='name')
+						.form__field
+							input.form__input(placeholder='Введите телефон:' name='number')
+						.form__field
+							input.form__input(placeholder='Введите e-mail:' name='email')
+						button.button.reasons__button.form__button#submit(type='submit') Нужен устный перевод
+				.header__message.form__message
+					p Спасибо, ваш запрос отправлен.
+
+					
